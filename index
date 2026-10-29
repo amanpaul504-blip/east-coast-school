@@ -558,3 +558,4 @@ header('Content-Type: text/html; charset=utf-8');
       color: var(--school-green);
       font-size: 1.35rem;
     }
+
