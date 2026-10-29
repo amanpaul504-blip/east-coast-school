@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,700,900');
+
+.application-form {
+  display: grid;
+  /* Defines two columns: one for labels (auto-sized to content width) 
+     and one for inputs (1fr takes the remaining available space)  grid-template-columns: auto 1fr;*/ 
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px; /* Adds space between grid items */
+  padding: 5px 50px 5px 50px;
+  align-items: center;
+  justify-content: center;
+  margin: 10px 20px 30px 20px;
+  background-color: #d0d0d5;
+  border-radius: 0px;
+}
+
+h3 {
+  /* Starts at the first vertical grid line and ends at the last (fifth) line */
+  grid-column: 1 / 4;
+  text-align: center; /* Optional: centers the text */
+  width:110%;
+  background-color: #fff;
+  margin-left: -50px;
+  margin-right: 60px;
+  padding: 5px;
+}
+
+.form-group label {
+  /* Aligns labels to the end (right side) of their column for better alignment with inputs */
+  justify-self: end; 
+  font-family: arial;
+  padding-right: 20px; /* Adds some space between the label and the input */
+}
+
+.form-group input {
+  width: 100%;
+  padding: 6px;
+  font: 25px;
+  box-sizing: border-box; /* Ensures padding/border is included in the element's total width */
+}
+input[type=firstname],
+input[type=middlename],  
+input[type=lastname], 
+input[type=date],
+input[type=sex],
+input[type=height],
+input[type=text],
+input[type=email],
+input[type=file] {
+  width: 100%;
+  padding: 12px;
+  margin: 6px 0;
+  display: inline-block;
+  border: 2px solid #fff;
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+input[type=file]:hover {
+  background-color: whitesmoke;
+}
+
+input[type=submit] {
+  background-color: whitesmoke;
+  width: 100%;
+  padding: 10px;
+  margin: 6px 0;
+  display: inline-block;
+  border: 2px solid #fff;
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-size: 25px;
+}
+
+input[type=submit]:hover {
+  background-color: lightblue;
+  color: darkblue;
+}
+
+
+select {
+  width: 100%;
+  padding: 12px;
+  margin: 6px 0;
+  display: inline-block;
+  border: 1px solid #fff;
+  border-radius: 10px;
+  box-sizing: border-box;
+  
+input:hover {
+  background-color: lightblue;
+  transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+input[type="checkbox"] {
+  vertical-align: middle;
+  display: inline-flex;
+  line-height: 0.5;
+  margin-left: 40px;
+}

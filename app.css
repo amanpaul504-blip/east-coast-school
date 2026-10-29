@@ -1,0 +1,200 @@
+/* ============================================
+   APPLICATION FORM STYLES (app.css)
+   ============================================ */
+
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,700,900');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.application-form {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  padding: 30px;
+  gap: 20px;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+  max-width: 800px;
+  width: 100%;
+}
+
+.application-form h1 {
+  grid-column: 1 / -1;
+  text-align: center;
+  color: #667eea;
+  margin-bottom: 30px;
+  font-size: 28px;
+}
+
+.form-group {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 15px;
+  align-items: center;
+}
+
+.form-group label {
+  font-weight: 600;
+  color: #333;
+  white-space: nowrap;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  padding: 10px 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.form-group textarea {
+  grid-column: 1 / -1;
+  resize: vertical;
+  min-height: 100px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  grid-column: 1 / -1;
+}
+
+.form-row .form-group {
+  grid-template-columns: 1fr;
+  gap: 8px;
+}
+
+.form-row .form-group label {
+  grid-column: 1 / -1;
+  white-space: normal;
+}
+
+@media (max-width: 768px) {
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+  
+  .application-form {
+    padding: 20px;
+  }
+  
+  .form-group {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+}
+
+button[type="submit"],
+.btn-submit {
+  grid-column: 1 / -1;
+  padding: 12px 30px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 20px;
+}
+
+button[type="submit"]:hover,
+.btn-submit:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 20px rgba(102, 126, 234, 0.4);
+}
+
+button[type="submit"]:active,
+.btn-submit:active {
+  transform: translateY(0);
+}
+
+.success-message {
+  grid-column: 1 / -1;
+  padding: 15px;
+  background: #e0f2f1;
+  color: #2e7d32;
+  border: 1px solid #a5d6a7;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.error-message {
+  grid-column: 1 / -1;
+  padding: 15px;
+  background: #ffebee;
+  color: #c62828;
+  border: 1px solid #ffcdd2;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.required {
+  color: #e9674f;
+  font-weight: bold;
+}
+
+/* Back to home link */
+.back-link {
+  grid-column: 1 / -1;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.back-link a {
+  color: #667eea;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.back-link a:hover {
+  text-decoration: underline;
+}
+
+/* Helper text */
+.helper-text {
+  font-size: 12px;
+  color: #718087;
+  margin-top: 4px;
+}
+
+/* Checkboxes and Radio Buttons */
+input[type="checkbox"],
+input[type="radio"] {
+  width: auto;
+  margin-right: 8px;
+}
+
+label:has(> input[type="checkbox"]),
+label:has(> input[type="radio"]) {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  white-space: normal;
+}
